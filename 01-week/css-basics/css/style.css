@@ -1,0 +1,11 @@
+body {
+  font-family: "Lucinda Grande";
+}
+
+div.my-class {
+  color: blue;
+}
+
+div {
+  color: red
+}

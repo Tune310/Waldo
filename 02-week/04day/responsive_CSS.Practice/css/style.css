@@ -1,0 +1,26 @@
+body{
+  background-color: blue;
+}
+
+div#one {
+	width: 200px;
+	height: 150px;
+	background-color: #FFFF00;
+}
+
+div#two {
+	width: 300px;
+	height: 200px;
+	background-color: #00FF00;
+}
+
+div#three {
+	width: 150px;
+	height: 300px;
+	background-color: #F102F3;
+}
+@media only screen and (max-width: 800px) {
+  body{
+    background-color: red;
+  }
+}

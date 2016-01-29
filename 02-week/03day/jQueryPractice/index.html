@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Practice</title>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>first</li>
+			<li>second</li>
+			<li>third</li>
+		</ul>
+	</div>
+	<button>My Button</button>
+	<script>
+		$(function(){
+			console.log("Document Has Loaded")
+
+			// var myButton=document.querySelector('button') //javascript version
+			var myButton = $('button') //jQuery version
+			// myButton.addEventListener('click', function(){ //Javascript Way
+				// console.log('Clicked Button')
+			var myDiv = $('div')
+
+			var myList = $('ul')
+			console.log(myList.children().eq(1).text('Whats up'))
+
+			myButton.click(function(){ //jQuery
+				myList.append('<li>new list item<li>').animate({'font-size': '+=5px'}) // adds a new node and ****prepend adds new node to the beginning
+
+				// myList.children().last().remove() removes and deletes something
+				// $(this).fadeOut(2000).fadeIn() //chain method
+					// console.log('animation complete')
+					// $(this).fadeIn() // callback
+				// })
+				
+				//$(this).fadeOut(2000) fade method timed
+				
+				// $('div').animate({'opacity': 0,
+				// 				 'font-size': '500px',
+				// 				 'font-color': 'blue',
+				// 				 'opacity': 1,
+				// 				 'font-color': '#0000FF'}) // animate method with multiple pairs
+
+
+
+			})
+
+		})
+	</script>
+</body>
+
+</html>
