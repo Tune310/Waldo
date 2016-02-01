@@ -46,26 +46,26 @@ section#bottom {
 	position: relative;
 }
 
-.colOne {
+.color {
 	width: 150px;
 	height: 100px;
-	border: 2px solid green;
+	/*border: 2px solid green;*/
 	float: left;
 
 }
 
-.colTwo {
+section#middle div.color {
 	width: 150px;
 	height: 100px;
-	border: 2px solid blue;
+	/*border: 2px solid blue;*/
 	float: left;
 	
 }
 
-.colThree {
+section#bottom div.color {
 	width: 150px;
 	height: 100px;
-	border: 2px solid black;
+	/*border: 2px solid black;*/
 	float: left
 }
 
