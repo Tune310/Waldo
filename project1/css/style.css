@@ -46,7 +46,7 @@ section#bottom {
 	position: relative;
 }
 
-.color {
+section#top div.color {
 	width: 150px;
 	height: 100px;
 	/*border: 2px solid green;*/
