@@ -12,6 +12,8 @@ var colors = ['red', 'green', 'blue', 'yellow', 'orange']
 // var yellow = ("background-color", "yellow");
 // var orange = ("background-color", "orange");
 var colorBox = $('.color')
+var pics = ['santa', 'hankey', 'cartman', 'waldo', 'santa', 'decoyWaldo']
+
 
 
 		colorBox.click(function(){
@@ -23,19 +25,3 @@ var colorBox = $('.color')
 });
 		
 
-
-// ///Look at this than delete it
-// $("p").on({
-//     mouseenter: function(){
-//         $(this).css("background-color", "lightgray");
-//     }, 
-//     mouseleave: function(){
-//         $(this).css("background-color", "lightblue");
-//     }, 
-//     click: function(){
-//         $(this).css("background-color", "yellow");
-//     } 
-// }); /// Conitinue here by working with this
-
-
-// Phillipe color change
