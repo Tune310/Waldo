@@ -38,6 +38,7 @@
 
 #five {
 	background-size: 100%;
+	background-image: url('images/waldo.jpg'); 
 }
 
 #six {
@@ -84,14 +85,6 @@ section#bottom {
 	position: relative;
 }
 
-section#top div.color {
-	width: 150px;
-	height: 100px;
-	/*border: 2px solid green;*/
-	float: left;
-
-}
-
 section#middle div.color {
 	width: 150px;
 	height: 100px;
@@ -111,6 +104,18 @@ div.color {
 	/*background-image: url('images/waldo.jpg');*/
 	/*background-size: 100%;*/
 	/*height: 100%;*/
+}
+
+img {
+	width: inherit;
+	height: inherit;
+}
+
+.box {
+	border: 2px solid blue;
+	width: 150px;
+	height: 100px;
+	float: left;
 }
 
 .waldo {
@@ -135,6 +140,25 @@ div.color {
 
 .santa {
 	background-image: url('images/santa.jpg');
+	background-size: 100%;
+}
+.jesusSanta {
+	background-image: url('images/jesusSanta.jpg');
+	background-size: 100%;
+}
+
+.katyPerry {
+	background-image: url('images/katyPerry.jpg');
+	background-size: 100%;
+}
+
+.theGrinch {
+	background-image: url('images/theGrinch.jpg');
+	background-size: 100%
+}
+
+.jenniferLawrence {
+	background-image: url('images/jenniferLawrence.jpg');
 	background-size: 100%;
 }
 
