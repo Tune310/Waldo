@@ -68,7 +68,7 @@ function shufflePics() {
 		// })
 		
 		var startGame = function() {
-			window.setInterval(shufflePics, 750)
+			window.setInterval(shufflePics, 850)
 		}
 
 		$('button').click(startGame);
@@ -76,6 +76,15 @@ function shufflePics() {
 		// $('.box').on('click', '.waldo', function(){
  	// 		console.log('+1')
  		
+ // 		var getWinner = function() {
+	// 	if('#score' == 10){
+	// 		console.log('playerOne wins');
+	// 		alert('playerOne is the winner')
+	// 	}else
+	// 		console.log('playerTwo wins')
+	// 		alert('playerTwo is the winner')
+	// }
+			
  	// 	})
 
  		$('.box').click(function(){
@@ -102,7 +111,12 @@ function shufflePics() {
  				alert('Next Playa Turn')
 
  			}
- 		})
+ 			
+	})	
+
+
+
+
 		// $(waldo).click(function(){
 		// 	$(this).data('clicked', true)
 		// });
