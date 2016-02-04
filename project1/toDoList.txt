@@ -18,3 +18,5 @@ I want jQuery to spit me a out a random div so I can insert an image in it when 
 and make sure the pics array is linking with the variables
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+set up eventListeners if you click on the right box with waldo you get a point, else false
