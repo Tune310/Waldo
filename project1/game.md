@@ -1,3 +1,3 @@
-#GAME#
+#FindWaldo
 
 ###overview

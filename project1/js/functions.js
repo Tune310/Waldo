@@ -1,5 +1,11 @@
-var playerOne
-var playerTwo
+var playerOne = 0
+var playerTwo = 0
+var current = 0 // it shows whose turn it is
+// 0 % 2 = 0
+// 1 % 2 = 1
+// 2 % 2 = 0
+// 3 % 2 = 1
+// whenever current % 2 equals to 0, then it's player1's turn, otherwise, it's player2's turn
 var points
 var colors = ['red', 'green', 'blue', 'yellow', 'orange']
 // var red =("background-color", "red");
@@ -24,6 +30,10 @@ var pics = [santa, hankey, cartman, decoyWaldo, waldo, katyPerry, jesusSanta, th
 // var randomDiv = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
 // var waldo = "div" + randomDiv;
 // var divs = ['div1',  'div2',  'div3',  'div4',  'div5', 'div6', 'div7', 'div8', 'div9']
+
+$('#score').text(playerOne)
+
+$('#score2').text(playerTwo)
 
 function shufflePics() {
 			// var random = pics[Math.floor(Math.random()*pics.length)]
@@ -63,9 +73,35 @@ function shufflePics() {
 
 		$('button').click(startGame);
 
-		$('body').on('click', '.waldo', function(){
- 			console.log('+1')
+		// $('.box').on('click', '.waldo', function(){
+ 	// 		console.log('+1')
  		
+ 	// 	})
+
+ 		$('.box').click(function(){
+ 			if ($(this).children().hasClass('waldo')){
+ 				if (current % 2 == 0) {
+ 					playerOne += 1
+ 					$('#score').text(playerOne)
+ 				} else {
+ 					playerTwo += 1
+ 					$('#score2').text(playerTwo)
+  				}
+ 				console.log('+1')
+ 				
+ 			} else {
+ 				console.log("nope")
+ 				if (current % 2 == 0) {
+ 					current += 1
+ 				} else {
+ 					current += 1
+ 				}
+ 				// playerOne = playerTwo
+ 				// playerTwo += 1
+ 				// $('#score').text(playerTwo)
+ 				alert('Next Playa Turn')
+
+ 			}
  		})
 		// $(waldo).click(function(){
 		// 	$(this).data('clicked', true)
