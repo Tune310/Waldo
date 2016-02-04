@@ -33,6 +33,8 @@
 * ##### - To check your score at the top right it displays your score next to players 1 and 2
 
 * ##### - To change difficulty press the "play button" and the game will be 2x faster with each click
+* \
+*\\		
 
 * ##### - Don't click on pkay too many times because than the game will be too fast to click on anthing
 

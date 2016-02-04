@@ -87,16 +87,28 @@ function shufflePics() {
 			
  	// 	})
 
+		function getWinner() {
+			if(playerOne >= 10) {
+				console.log('player one Wins')
+			}else if(playerTwo >= 10){
+				console.log('player two wins')
+			}else{
+
+			}
+		}
+
  		$('.box').click(function(){
  			if ($(this).children().hasClass('waldo')){
  				if (current % 2 == 0) {
  					playerOne += 1
+ 					 getWinner()
  					$('#score').text(playerOne)
  				} else {
  					playerTwo += 1
+ 					getWinner()
  					$('#score2').text(playerTwo)
   				}
- 				console.log('+1')
+ 				
  				
  			} else {
  				console.log("nope")
