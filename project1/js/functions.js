@@ -27,6 +27,8 @@ var boxes = $('.box')
 
 var pics = [santa, hankey, cartman, decoyWaldo, waldo, katyPerry, jesusSanta, theGrinch, jenniferLawrence]
 
+var timer = null
+
 // var randomDiv = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
 // var waldo = "div" + randomDiv;
 // var divs = ['div1',  'div2',  'div3',  'div4',  'div5', 'div6', 'div7', 'div8', 'div9']
@@ -48,7 +50,7 @@ function shufflePics() {
 	     			var tempj = myArray[j];
 	     			myArray[i] = tempj;
 	     			myArray[j] = tempi;
-	  			 	}
+	  			}
 			}
 			
 			shuffleArray(pics)
@@ -68,7 +70,7 @@ function shufflePics() {
 		// })
 		
 		var startGame = function() {
-			window.setInterval(shufflePics, 850)
+			timer = window.setInterval(shufflePics, 850)
 		}
 
 		$('button').click(startGame);
@@ -90,8 +92,11 @@ function shufflePics() {
 		function getWinner() {
 			if(playerOne >= 10) {
 				console.log('player one Wins')
+				$('#head').text('Player One Wins')
+				window.clearInterval(timer)
 			}else if(playerTwo >= 10){
 				console.log('player two wins')
+				window.clearInterval(timer)
 			}else{
 
 			}
@@ -101,12 +106,12 @@ function shufflePics() {
  			if ($(this).children().hasClass('waldo')){
  				if (current % 2 == 0) {
  					playerOne += 1
- 					 getWinner()
  					$('#score').text(playerOne)
+ 					getWinner()
  				} else {
  					playerTwo += 1
- 					getWinner()
  					$('#score2').text(playerTwo)
+ 					getWinner()
   				}
  				
  				
