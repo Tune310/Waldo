@@ -27,6 +27,7 @@ var boxes = $('.box')
 
 var pics = [santa, hankey, cartman, decoyWaldo, waldo, katyPerry, jesusSanta, theGrinch, jenniferLawrence]
 
+// timer set to null so it takes no space
 var timer = null
 
 // var randomDiv = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
@@ -38,9 +39,8 @@ $('#score').text(playerOne)
 $('#score2').text(playerTwo)
 
 function shufflePics() {
-			// var random = pics[Math.floor(Math.random()*pics.length)]
-			// var whatDiv = divs[Math.floor(Math.random()*divs.length)]
-
+	
+			// FisherYates Shuffle algorithm
 			function shuffleArray ( myArray ) {
 	  			var i = myArray.length;
 	  			if ( i == 0 ) return false;
@@ -53,6 +53,7 @@ function shufflePics() {
 	  			}
 			}
 			
+			// using FisherYates algorith to do mixed with a loop to randomly generate each image in a div
 			shuffleArray(pics)
 			
 			for(var i = 0; i < boxes.length; i++) {
@@ -60,34 +61,14 @@ function shufflePics() {
 				boxes[i].innerHTML = pics[i];
 			}
 	}
-
-
-
-
-		// colorBox.click(function(){
-		// 	$(this).addClass(colors[Math.floor(Math.random() * colors.length)])
-		// 	// alert('works')
-		// })
 		
+		// set the loop to run the shuffle function less than a second
 		var startGame = function() {
 			timer = window.setInterval(shufflePics, 850)
 		}
 
 		$('button').click(startGame);
 
-		// $('.box').on('click', '.waldo', function(){
- 	// 		console.log('+1')
- 		
- // 		var getWinner = function() {
-	// 	if('#score' == 10){
-	// 		console.log('playerOne wins');
-	// 		alert('playerOne is the winner')
-	// 	}else
-	// 		console.log('playerTwo wins')
-	// 		alert('playerTwo is the winner')
-	// }
-			
- 	// 	})
 
 		function getWinner() {
 			if(playerOne >= 10) {
@@ -96,12 +77,13 @@ function shufflePics() {
 				window.clearInterval(timer)
 			}else if(playerTwo >= 10){
 				console.log('player two wins')
+				$('#head').text('Player Two Wins')
 				window.clearInterval(timer)
 			}else{
 
 			}
 		}
-
+			//this determines who gets a point
  		$('.box').click(function(){
  			if ($(this).children().hasClass('waldo')){
  				if (current % 2 == 0) {
@@ -114,7 +96,7 @@ function shufflePics() {
  					getWinner()
   				}
  				
- 				
+ 				// switch turn
  			} else {
  				console.log("nope")
  				if (current % 2 == 0) {
